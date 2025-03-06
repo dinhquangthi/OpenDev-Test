@@ -139,3 +139,7 @@ a {
   text-decoration: none;
   color: #fff;
 }
+
+div {
+  box-sizing: border-box;
+}

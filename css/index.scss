@@ -15,6 +15,9 @@ body {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
+  @media only screen and (max-width: 768px) {
+    padding: 0 2vw;
+  }
 }
 
 .link {
@@ -28,16 +31,19 @@ body {
 }
 main {
   padding-top: 100px;
-  padding-bottom: 100px;
 }
 .cta {
+  padding: 100px 0;
+  @media only screen and (max-width: 768px) {
+    padding: 10vw 0;
+  }
   &-banner {
     width: 1000px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 25px 40px;
+    padding: 30px 84px 25px 207px;
     border-radius: 24px;
     font-size: 32px;
     font-weight: 500;
@@ -46,9 +52,21 @@ main {
     background: url("../images/bg-gift.png") repeat center;
     background-size: contain;
     position: relative;
+    @media only screen and (max-width: 768px) {
+      width: 80.125vw;
+      font-size: 2.965vw;
+      line-height: 1.2;
+      padding: 4vw 3vw;
+      border-radius: 5vw;
+      text-align: center;
+    }
     span {
       font-size: 16px;
-      margin-top: 10px;
+      margin-top: 6px;
+      @media only screen and (max-width: 768px) {
+        margin-top: 2vw;
+        font-size: 2.083vw;
+      }
     }
     &:before {
       content: "";
@@ -58,8 +76,15 @@ main {
       background-size: contain;
       position: absolute;
       left: 0;
-      top: 50%;
+      top: 42%;
       transform: translateY(-50%);
+      @media only screen and (max-width: 768px) {
+        width: 15.625vw;
+        height: 15.625vw;
+        top: -11.245vw;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
     }
   }
   &-button {
@@ -74,9 +99,18 @@ main {
     background-color: #fff;
     border-radius: 12px;
     position: absolute;
-    right: -15px;
+    right: -58px;
     top: 50%;
     transform: translateY(-50%);
+    @media only screen and (max-width: 768px) {
+      font-size: 2.083vw;
+      width: 15.625vw;
+      height: 5.425vw;
+      bottom: -3.245vw;
+      left: 50%;
+      top: auto;
+      transform: translate(-50%, 0);
+    }
   }
 }
 .footer {
