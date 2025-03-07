@@ -37,6 +37,8 @@ main {
   font-family: $fontBigShould;
   font-size: 72px;
   font-weight: 700;
+  letter-spacing: 1.5px;
+  color: #d9d9d9;
 }
 .footer {
   border-top: 1px solid #292929;
@@ -270,14 +272,57 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.3s ease;
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 .attractions {
-  padding-bottom: 86px;
+  padding-bottom: 103px;
+  padding-top: 15px;
+  &-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 57px;
+    .title {
+      flex-shrink: 0;
+    }
+    .flag {
+      margin-left: auto;
+      max-width: 400px;
+      font-weight: 500;
+      color: #d9d9d9;
+      padding-right: 56px;
+      padding-top: 24px;
+      position: relative;
+      &:before {
+        content: "";
+        width: 13px;
+        height: 13px;
+        clip-path: polygon(100% 0, 0 52%, 100% 100%);
+        background-color: #e30613;
+        position: absolute;
+        top: 28px;
+        right: 20px;
+      }
+      &:after {
+        content: "";
+        width: 13px;
+        height: 13px;
+        clip-path: polygon(100% 0, 0 52%, 100% 100%);
+        background-color: #009fe3;
+        position: absolute;
+        top: 28px;
+        right: 4px;
+      }
+    }
+  }
 }
 .cheb {
   display: flex;
   &-group {
     width: 500px;
+    padding: 37px 0 0 6px;
     &__item {
       width: 446px;
       height: 64px;
@@ -285,7 +330,6 @@ main {
       border-radius: 10px 20px 10px 20px;
       background-size: contain;
       position: relative;
-      // background-color: #d9d9d9;
       transform: skew(-24deg, 0deg);
       background-size: contain;
       position: relative;
@@ -325,7 +369,6 @@ main {
         transform: skew(24deg, 0deg);
       }
       &.active {
-        //  background-color: #292929;
         width: 525px;
         padding-right: 51px;
         .name {
@@ -338,29 +381,35 @@ main {
     }
   }
   &-detail {
-    width: 780px;
-    height: 518px;
+    width: 51.59vw;
+    height: 34.26vw;
     flex-shrink: 0;
-    border-radius: 24px;
-    overflow: hidden;
+    border-radius: 1.59vw;
     position: relative;
+    display: flex;
+    align-items: flex-end;
     &:after {
       content: "";
-      width: 181px;
-      height: 51px;
-      background-color: #191919;
-      border-radius: 25px;
+      width: 11.97vw;
+      height: 3.37vw;
       position: absolute;
       bottom: 0;
       right: 0;
       z-index: 1;
     }
+    .thumb {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
     .info {
       position: relative;
-      top: -82px;
-      padding: 0 0 0 33px;
+      top: -1.65vw;
+      padding: 0 0 0 2.18vw;
       p {
-        width: 400px;
+        width: 26.46vw;
         line-height: 1.2;
       }
     }
