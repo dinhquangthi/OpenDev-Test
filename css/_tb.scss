@@ -23,7 +23,6 @@
     }
   }
   main {
-    padding-top: 6.614vw;
   }
   .title {
     font-family: $fontBig;
@@ -336,7 +335,7 @@
     }
   }
   .entertainment {
-    padding-bottom: 13.228vw;
+    padding-bottom: 13.095vw;
     &-head {
       padding-left: 15.41vw;
       .txt {
@@ -489,6 +488,234 @@
         top: 1.257vw;
         right: 9.127vw;
       }
+    }
+  }
+  .mv {
+    height: 60.847vw;
+    padding-bottom: 13.228vw;
+    overflow: hidden;
+    position: relative;
+    &-slide {
+      position: relative;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      &__image {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+        &:before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 50%;
+          background: linear-gradient(0deg, rgb(25, 25, 25) 5%, rgba(25, 25, 25, 0) 100%);
+          bottom: 0;
+        }
+      }
+      &__content {
+        position: relative;
+        z-index: 2;
+        margin: 0 0 5.886vw 3.175vw;
+        .b-ttl {
+          font-family: $fontStencil;
+          font-size: 7.937vw;
+          font-weight: 700;
+          margin-bottom: 2.381vw;
+          letter-spacing: 0.086vw;
+        }
+        .b-group {
+          display: flex;
+          p {
+            font-size: 0.926vw;
+            line-height: 1.28;
+            color: $color_2;
+          }
+        }
+      }
+    }
+    .swiper {
+      width: 100%;
+      height: 100%;
+      &-pagination {
+        width: 33.069vw;
+        text-align: left;
+        margin: 0 0 15.608vw 3.307vw;
+        &-bullet {
+          width: 0.728vw;
+          height: 0.728vw;
+          border: 0.066vw solid $color_2;
+          border-radius: 50%;
+          background-color: transparent;
+          margin: 0 0.331vw !important;
+          position: relative;
+          &:before {
+            content: "";
+            width: 0.992vw;
+            height: 0.992vw;
+            border: 0.132vw solid $color_2;
+            border-radius: 50%;
+            position: absolute;
+            top: -0.265vw;
+            left: -0.265vw;
+            opacity: 0;
+            transition: all 0.3s ease;
+          }
+          &-active {
+            background-color: $color_2;
+            border: 0;
+            &:before {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+    .fun {
+      width: 25.397vw;
+      position: absolute;
+      right: 3.108vw;
+      bottom: 15.146vw;
+      z-index: 2;
+      padding: 0.728vw 1.323vw 2.646vw 0.926vw;
+      background: url("../images/union.png") no-repeat top center;
+      background-size: 100% auto;
+      &:before {
+        content: "";
+        width: 5.754vw;
+        height: 5.754vw;
+        background: url("../images/flag.png") no-repeat center;
+        background-size: contain;
+        position: absolute;
+        top: -2.05vw;
+        left: -1.124vw;
+      }
+      &:after {
+        content: "";
+        width: 36.772vw;
+        height: 27.844vw;
+        background: url("../images/radian.png") no-repeat center;
+        background-size: contain;
+        position: absolute;
+        top: -9.325vw;
+        left: -6.349vw;
+        z-index: -1;
+      }
+      &-ttl {
+        font-family: $fontBig;
+        font-size: 2.116vw;
+        font-weight: 400;
+        text-align: center;
+        padding-left: 3.439vw;
+        margin-bottom: 0.992vw;
+        color: $color_2;
+      }
+      p {
+        font-size: 0.926vw;
+        line-height: 1.3;
+        color: $color_2;
+        span {
+          background: #009fe3;
+          background: linear-gradient(to right, #009fe3 14%, #ffffff 73%, #e30613 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      &-tel {
+        position: absolute;
+        color: $color_3;
+        height: 2.513vw;
+        background-color: $color_2;
+        border-radius: 3.307vw;
+        font-family: $fontLexend;
+        font-size: 1.058vw;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0.265vw 0 0.794vw;
+        right: 0.463vw;
+        bottom: 0.132vw;
+        transition: all 0.2s ease;
+        &:hover {
+          transform: scale(1.03);
+        }
+        &:after {
+          content: "";
+          width: 1.984vw;
+          height: 1.984vw;
+          background: url("../images/phone-red.png") no-repeat center;
+          background-size: contain;
+          margin-left: 0.661vw;
+        }
+      }
+      &-cta {
+        position: absolute;
+        bottom: 2.05vw;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 3;
+        width: 34.722vw;
+        height: 25.794vw;
+        background: url("../images/radian.png") no-repeat center;
+        background-size: contain;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  .btn-find {
+    width: 9.59vw;
+    height: 3.108vw;
+    color: $color_2;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2.778vw;
+    position: relative;
+    top: 0.265vw;
+    transition: all 0.3s ease;
+    &:hover {
+      color: $color_3;
+      &:before {
+        background-color: $color_2;
+      }
+    }
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      transform: skew(-23deg, 0);
+      border-radius: 0.529vw;
+      border: 0.066vw solid $color_2;
+      position: absolute;
+      z-index: -1;
+      transition: all 0.3s ease;
+    }
+  }
+  .btn-reseve {
+    font-family: $fontBig;
+    font-size: 2.116vw;
+    font-weight: 700;
+    color: $color_2;
+    text-align: center;
+    width: 17.526vw;
+    height: 4.299vw;
+    padding: 0 0 0 0.661vw;
+    background: url("../images/btn-now.png") no-repeat center;
+    background-size: contain;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    transition: all 0.2s linear;
+    &:hover {
+      transform: scale(1.06);
     }
   }
 }
