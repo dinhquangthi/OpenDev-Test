@@ -1685,7 +1685,7 @@ body {
     transform: scale(1.06);
   }
 }
-@media only screen and (max-width: 1768px) {
+@media only screen and (max-width: 768px) {
   body {
     font-family: "Space Grotesk", sans-serif;
     font-size: 3.646vw;
@@ -1714,19 +1714,55 @@ body {
     height: 5.599vw;
     margin: 2.604vw 0 0;
   }
+  .btn-find:before {
+    border-radius: 1.042vw;
+  }
   .hambuger {
-    margin-left: 3.125vw;
+    width: 10.25vw;
+    height: 10.25vw;
+    border-radius: 50%;
+    margin-left: 4.167vw;
+    padding: 0 0 0 0.781vw;
+  }
+  .hambuger span {
+    width: 1.563vw;
+    height: 0.26vw;
+    border-radius: 0.651vw;
+  }
+  .hambuger span:before, .hambuger span:after {
+    width: 2.474vw;
+    height: 0.26vw;
+    border-radius: 0.651vw;
+  }
+  .hambuger span:before {
+    top: -1.042vw;
+  }
+  .hambuger span:after {
+    top: 1.042vw;
   }
   .header {
     padding: 5.208vw 4.948vw;
+  }
+  .header-logo {
+    width: 156.718px;
+    height: 72.722px;
+    top: 0.391vw;
   }
   .header-main {
     width: 52.083vw;
     align-items: unset;
   }
   .header-main__link {
-    width: 3.906vw;
-    height: 3.906vw;
+    width: 4.8vw;
+    height: 4.8vw;
+    position: relative;
+    top: 1.302vw;
+  }
+  .header .menu {
+    padding: 7.813vw 13.021vw;
+  }
+  .header .menu-item {
+    padding: 7.813vw 0;
   }
   .header .menu-item a {
     font-size: 4.167vw;
@@ -1741,6 +1777,9 @@ body {
   .mv-slide__image:before {
     height: 100%;
   }
+  .mv-slide__content {
+    margin: 0 0 11.589vw 6.25vw;
+  }
   .mv-slide__content .b-ttl {
     font-size: 14.323vw;
   }
@@ -1751,11 +1790,48 @@ body {
     font-size: 2.344vw;
   }
   .mv .fun {
+    position: absolute;
+    width: 50vw;
     right: 2.604vw;
-    bottom: 37.109vw;
+    bottom: 39.063vw;
+    padding: 1.432vw 2.604vw 5.208vw 1.823vw;
+  }
+  .mv .fun:before {
+    width: 11.328vw;
+    height: 11.328vw;
+    top: -4.036vw;
+    left: -2.214vw;
   }
   .mv .fun:after {
     display: none;
+  }
+  .mv .fun-ttl {
+    font-size: 4.167vw;
+    padding-left: 6.771vw;
+    margin-bottom: 1.953vw;
+  }
+  .mv .fun p {
+    font-size: 1.823vw;
+  }
+  .mv .fun-tel {
+    height: 4.948vw;
+    border-radius: 6.51vw;
+    font-size: 2.083vw;
+    padding: 0 0.521vw 0 1.563vw;
+    right: 0.911vw;
+    bottom: 0.26vw;
+  }
+  .mv .fun-tel:after {
+    width: 3.906vw;
+    height: 3.906vw;
+    margin-left: 1.302vw;
+  }
+  .mv .fun-cta {
+    bottom: 7.682vw;
+    left: 50%;
+    width: 54.557vw;
+    height: 43.49vw;
+    background-size: contain;
   }
   .mv .swiper-pagination {
     margin: 0 0 30.729vw 6.51vw;
@@ -1993,5 +2069,11 @@ body {
     height: 10.417vw;
     bottom: auto;
     top: 0;
+  }
+  .btn-reseve {
+    font-size: 4.167vw;
+    width: 34.505vw;
+    height: 8.464vw;
+    padding: 0 0 0 1.302vw;
   }
 }

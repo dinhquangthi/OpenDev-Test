@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1768px) {
+@media only screen and (max-width: 768px) {
   body {
     font-family: $fontSpace;
     font-size: 3.646vw;
@@ -26,22 +26,55 @@
     font-size: 2.604vw;
     height: 5.599vw;
     margin: 2.604vw 0 0;
+    &:before {
+      border-radius: 1.042vw;
+    }
   }
   .hambuger {
-    margin-left: 3.125vw;
+    width: 10.25vw;
+    height: 10.25vw;
+    border-radius: 50%;
+    margin-left: 4.167vw;
+    padding: 0 0 0 0.781vw;
+    span {
+      width: 1.563vw;
+      height: 0.26vw;
+      border-radius: 0.651vw;
+      &:before,
+      &:after {
+        width: 2.474vw;
+        height: 0.26vw;
+        border-radius: 0.651vw;
+      }
+      &:before {
+        top: -1.042vw;
+      }
+      &:after {
+        top: 1.042vw;
+      }
+    }
   }
   .header {
     padding: 5.208vw 4.948vw;
+    &-logo {
+      width: 156.718px;
+      height: 72.722px;
+      top: 0.391vw;
+    }
     &-main {
       width: 52.083vw;
       align-items: unset;
       &__link {
-        width: 3.906vw;
-        height: 3.906vw;
+        width: 4.8vw;
+        height: 4.8vw;
+        position: relative;
+        top: 1.302vw;
       }
     }
     .menu {
+      padding: 7.813vw 13.021vw;
       &-item {
+        padding: 7.813vw 0;
         a {
           font-size: 4.167vw;
         }
@@ -59,6 +92,7 @@
         }
       }
       &__content {
+        margin: 0 0 11.589vw 6.25vw;
         .b-ttl {
           font-size: 14.323vw;
         }
@@ -71,10 +105,47 @@
       }
     }
     .fun {
+      position: absolute;
+      width: 50vw;
       right: 2.604vw;
-      bottom: 37.109vw;
+      bottom: 39.063vw;
+      padding: 1.432vw 2.604vw 5.208vw 1.823vw;
+      &:before {
+        width: 11.328vw;
+        height: 11.328vw;
+        top: -4.036vw;
+        left: -2.214vw;
+      }
       &:after {
         display: none;
+      }
+      &-ttl {
+        font-size: 4.167vw;
+        padding-left: 6.771vw;
+        margin-bottom: 1.953vw;
+      }
+      p {
+        font-size: 1.823vw;
+      }
+      &-tel {
+        height: 4.948vw;
+        border-radius: 6.51vw;
+        font-size: 2.083vw;
+        padding: 0 0.521vw 0 1.563vw;
+        right: 0.911vw;
+        bottom: 0.26vw;
+        &:after {
+          width: 3.906vw;
+          height: 3.906vw;
+          margin-left: 1.302vw;
+        }
+      }
+      &-cta {
+        bottom: 7.682vw;
+        left: 50%;
+        width: 54.557vw;
+        height: 43.49vw;
+        background-size: contain;
       }
     }
     .swiper {
@@ -328,5 +399,11 @@
       bottom: auto;
       top: 0;
     }
+  }
+  .btn-reseve {
+    font-size: 4.167vw;
+    width: 34.505vw;
+    height: 8.464vw;
+    padding: 0 0 0 1.302vw;
   }
 }
