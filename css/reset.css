@@ -140,6 +140,6 @@ a {
   color: #fff;
 }
 
-div {
+* {
   box-sizing: border-box;
 }

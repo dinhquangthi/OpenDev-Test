@@ -25,6 +25,129 @@ body {
   opacity: 0.6;
 }
 
+.header {
+  position: fixed;
+  width: 100%;
+  padding: 20px 46px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+.header-logo {
+  width: 126px;
+  height: 42px;
+  flex-shrink: 0;
+  position: relative;
+  top: 3px;
+}
+.header-logo a {
+  display: block;
+}
+.header-main {
+  width: 500px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.header-main__nav {
+  display: flex;
+}
+.header-main__link {
+  width: 28px;
+  height: 28px;
+}
+.header-main__link a {
+  display: block;
+}
+.header .menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #292929;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 100px;
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.5s ease-in-out;
+}
+.header .menu.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+.header .menu-item {
+  width: 100%;
+  padding: 40px 0;
+}
+.header .menu-item + .menu-item {
+  border-top: 1px solid #d9d9d9;
+}
+.header .menu-item a {
+  font-size: 32px;
+  text-align: center;
+  display: block;
+}
+
+.hambuger {
+  width: 48px;
+  height: 48px;
+  background-color: #292929;
+  border-radius: 50%;
+  margin-left: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 6px;
+  cursor: pointer;
+  z-index: 2;
+}
+.hambuger.active {
+  background-color: #d9d9d9;
+}
+.hambuger.active span {
+  background-color: transparent;
+}
+.hambuger.active span:before {
+  transform: rotate(-135deg);
+  background-color: #292929;
+  top: 0;
+}
+.hambuger.active span:after {
+  transform: rotate(135deg);
+  background-color: #292929;
+  top: 0;
+}
+.hambuger span {
+  width: 12px;
+  height: 2px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  display: block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.hambuger span:before, .hambuger span:after {
+  content: "";
+  width: 19px;
+  height: 2px;
+  background-color: #d9d9d9;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  right: 0;
+  transition: all 0.3s ease;
+}
+.hambuger span:before {
+  top: -8px;
+}
+.hambuger span:after {
+  top: 8px;
+}
+
 .title {
   font-family: "Big Shoulders", sans-serif;
   font-size: 72px;
@@ -551,6 +674,7 @@ body {
   width: 500px;
   text-align: left;
   margin: 0 0 236px 50px;
+  z-index: 5;
 }
 .mv .swiper-pagination-bullet {
   width: 11px;
