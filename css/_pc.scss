@@ -698,8 +698,8 @@ main {
     }
   }
   .fun {
-    width: 384px;
     position: absolute;
+    width: 384px;
     right: 47px;
     bottom: 229px;
     z-index: 2;
@@ -777,14 +777,14 @@ main {
     }
     &-cta {
       position: absolute;
-      bottom: 31px;
+      bottom: 59px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 3;
-      width: 525px;
-      height: 390px;
+      width: 419px;
+      height: 334px;
       background: url("../images/radian.png") no-repeat center;
-      background-size: contain;
+      background-size: auto;
       display: flex;
       justify-content: center;
       align-items: center;

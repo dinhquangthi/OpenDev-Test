@@ -1,4 +1,4 @@
-@media only screen and (max-width: 1511px) {
+@media only screen and (min-width: 769px) and (max-width: 1511px) {
   body {
     font-family: $fontSpace;
     font-size: 1.058vw;
@@ -24,7 +24,128 @@
   }
   main {
   }
-
+  .header {
+    position: fixed;
+    width: 100%;
+    padding: 1.323vw 3.042vw;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    &-logo {
+      width: 8.333vw;
+      height: 2.778vw;
+      flex-shrink: 0;
+      position: relative;
+      top: 0.198vw;
+      a {
+        display: block;
+      }
+    }
+    &-main {
+      width: 33.069vw;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      &__nav {
+        display: flex;
+      }
+      &__link {
+        width: 1.852vw;
+        height: 1.852vw;
+        a {
+          display: block;
+        }
+      }
+    }
+    .menu {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: $color_3;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3.968vw 6.614vw;
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: all 0.5s ease-in-out;
+      &.active {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      &-item {
+        width: 100%;
+        padding: 2.646vw 0;
+        & + .menu-item {
+          border-top: 0.066vw solid $color_2;
+        }
+        a {
+          font-size: 2.116vw;
+          text-align: center;
+          display: block;
+        }
+      }
+    }
+  }
+  .hambuger {
+    width: 3.175vw;
+    height: 3.175vw;
+    background-color: $color_3;
+    border-radius: 50%;
+    margin-left: 2.116vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 0 0 0.397vw;
+    cursor: pointer;
+    z-index: 2;
+    &.active {
+      background-color: $color_2;
+      span {
+        background-color: transparent;
+        &:before {
+          transform: rotate(-135deg);
+          background-color: $color_3;
+          top: 0;
+        }
+        &:after {
+          transform: rotate(135deg);
+          background-color: $color_3;
+          top: 0;
+        }
+      }
+    }
+    span {
+      width: 0.794vw;
+      height: 0.132vw;
+      background-color: $color_2;
+      border-radius: 0.331vw;
+      display: block;
+      position: relative;
+      transition: all 0.3s ease;
+      &:before,
+      &:after {
+        content: "";
+        width: 1.257vw;
+        height: 0.132vw;
+        background-color: $color_2;
+        border-radius: 0.331vw;
+        display: block;
+        position: absolute;
+        right: 0;
+        transition: all 0.3s ease;
+      }
+      &:before {
+        top: -0.529vw;
+      }
+      &:after {
+        top: 0.529vw;
+      }
+    }
+  }
   .title {
     font-family: $fontBig;
     font-size: 4.762vw;
@@ -546,6 +667,7 @@
         width: 33.069vw;
         text-align: left;
         margin: 0 0 15.608vw 3.307vw;
+        z-index: 5;
         &-bullet {
           width: 0.728vw;
           height: 0.728vw;

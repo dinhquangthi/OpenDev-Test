@@ -1,10 +1,16 @@
 document.addEventListener("DOMContentLoaded", (event) => {
   new Menu();
+  new ScrollSmooth();
   const swiper = new Swiper(".swiper", {
     loop: true,
     effect: "fade",
+    allowTouchMove: false,
+    // autoplay: {
+    //   delay: 5000,
+    // },
     pagination: {
       el: ".swiper-pagination",
+      clickable: true,
     },
   });
 });
@@ -33,5 +39,18 @@ class Menu {
     this.trigger.classList.remove("active");
     this.wrap.classList.remove("active");
     document.body.style.overflow = "";
+  }
+}
+class ScrollSmooth {
+  constructor() {
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute("href")).scrollIntoView({
+          behavior: "smooth",
+        });
+      });
+    });
   }
 }
