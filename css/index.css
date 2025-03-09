@@ -1827,14 +1827,30 @@ body {
     margin-left: 1.302vw;
   }
   .mv .fun-cta {
-    bottom: 7.682vw;
+    bottom: 0;
     left: 50%;
     width: 54.557vw;
     height: 43.49vw;
     background-size: contain;
   }
   .mv .swiper-pagination {
-    margin: 0 0 30.729vw 6.51vw;
+    width: 65.104vw;
+    bottom: 40vh;
+    left: 6vw;
+    margin: 0;
+  }
+  .mv .swiper-pagination-bullet {
+    width: 1.5vw;
+    height: 1.5vw;
+    margin: 0 0.651vw !important;
+  }
+  .mv .swiper-pagination-bullet:before {
+    content: "";
+    width: 2.4vw;
+    height: 2.4vw;
+    border: 1px solid #d9d9d9;
+    top: -0.62vw;
+    left: -0.6vw;
   }
   .entertainment-head {
     padding-left: 0;
@@ -2072,8 +2088,8 @@ body {
   }
   .btn-reseve {
     font-size: 4.167vw;
-    width: 34.505vw;
-    height: 8.464vw;
+    width: 39.505vw;
+    height: 13.464vw;
     padding: 0 0 0 1.302vw;
   }
 }

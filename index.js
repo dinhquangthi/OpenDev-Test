@@ -4,10 +4,14 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const swiper = new Swiper(".swiper", {
     loop: true,
     effect: "fade",
-    allowTouchMove: false,
-    // autoplay: {
-    //   delay: 5000,
-    // },
+    autoplay: {
+      delay: 5000,
+    },
+    breakpoints: {
+      769: {
+        allowTouchMove: false,
+      },
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,

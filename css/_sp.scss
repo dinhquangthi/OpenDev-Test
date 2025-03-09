@@ -141,7 +141,7 @@
         }
       }
       &-cta {
-        bottom: 7.682vw;
+        bottom: 0;
         left: 50%;
         width: 54.557vw;
         height: 43.49vw;
@@ -150,7 +150,23 @@
     }
     .swiper {
       &-pagination {
-        margin: 0 0 30.729vw 6.51vw;
+        width: 65.104vw;
+        bottom: 40vh;
+        left: 6vw;
+        margin: 0;
+        &-bullet {
+          width: 1.5vw;
+          height: 1.5vw;
+          margin: 0 0.651vw !important;
+          &:before {
+            content: "";
+            width: 2.4vw;
+            height: 2.4vw;
+            border: 1px solid $color_2;
+            top: -0.62vw;
+            left: -0.6vw;
+          }
+        }
       }
     }
   }
@@ -402,8 +418,8 @@
   }
   .btn-reseve {
     font-size: 4.167vw;
-    width: 34.505vw;
-    height: 8.464vw;
+    width: 39.505vw;
+    height: 13.464vw;
     padding: 0 0 0 1.302vw;
   }
 }
